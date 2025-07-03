@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+body {
+    background-image: url('src/assets/weather-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
