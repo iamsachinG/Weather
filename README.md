@@ -1,83 +1,59 @@
-# 🌦️ Weather App
+# Weather
 
-A simple and responsive weather application built with React and Vite. Search for any city to check its current temperature, weather conditions, and humidity.
+A responsive city weather app built with React and Vite. Search for current conditions around the world with a clean interface designed for desktop and mobile.
 
-## 🌐 Live Demo
+## Live demo
 
-**[Visit Weather App](https://cmwr.vercel.app/)**
+[Open Weather](https://cmwr.vercel.app/)
 
-## ✨ Features
+## Features
 
-- 🔍 Search weather by city name
-- 🌡️ Temperature displayed in Celsius
-- ☁️ Current weather conditions
-- 💧 Humidity information
-- ⚡ Loading indicator
-- 📱 Responsive user interface
-- ❌ Error handling for invalid city names
+- Search by city using the search button or Enter key.
+- View current temperature in Celsius, condition, and feels-like temperature.
+- See humidity, wind speed in km/h, and atmospheric pressure when available.
+- Weather icons and background colors adapt to the reported conditions and local time.
+- Loading, invalid-city, and connection error states.
+- Responsive layout, keyboard focus styles, and reduced-motion support.
+- Custom 🌤️ favicon.
 
-## 🛠️ Tech Stack
+## Built with
 
-- React.js
-- JavaScript
+- React and JavaScript
 - Vite
 - Tailwind CSS
-- OpenWeatherMap API
-- Font Awesome
-- Vercel
+- OpenWeatherMap Current Weather API
 
-## 🚀 Getting Started
+## Run locally
 
-### Prerequisites
+Requires Node.js and npm.
 
-Install Node.js and npm.
+```sh
+git clone https://github.com/iamsachinG/Weather.git
+cd Weather
+npm install
+npm run dev
+```
 
-### Installation
+Vite prints the local development URL in the terminal.
 
-Clone the repository:
+## API configuration
 
-    git clone https://github.com/iamsachinG/Weather.git
+Weather data comes from the [OpenWeatherMap Current Weather API](https://openweathermap.org/current). The app currently includes a client-side fallback API key. To use a different key, create a `.env` file in the project root:
 
-Navigate to the project:
+```env
+VITE_OPENWEATHER_API_KEY=your_openweathermap_key
+```
 
-    cd Weather
+Vite variables prefixed with `VITE_` are bundled into the browser code, so they are visible to users and are not suitable for private credentials. Restrict the key in OpenWeatherMap. For Vercel, configure `VITE_OPENWEATHER_API_KEY` in the project’s Environment Variables and redeploy.
 
-Install dependencies:
+## Build and lint
 
-    npm install
+```sh
+npm run build
+npm run lint
+npm run preview
+```
 
-Start the development server:
+## Author
 
-    npm run dev
-
-Open the local URL displayed in your terminal.
-
-## 📦 Production Build
-
-Build the application:
-
-    npm run build
-
-Preview the production build:
-
-    npm run preview
-
-## 🌤️ Weather API
-
-This application uses the
-[OpenWeatherMap API](https://openweathermap.org/api)
-to retrieve weather information. Set `VITE_OPENWEATHER_API_KEY` in a local `.env` file before running the app:
-
-    VITE_OPENWEATHER_API_KEY=your_openweathermap_key
-
-Add the same variable in the Vercel project settings and redeploy. Vite exposes `VITE_` variables in browser code, so this key is visible to visitors; restrict it in OpenWeatherMap and rotate the previously committed key.
-
-## 👨‍💻 Author
-
-**Sachin Gupta**
-
-GitHub: [@iamsachinG](https://github.com/iamsachinG)
-
----
-
-⭐ If you like this project, consider giving it a star!
+**Sachin Gupta** · [@iamsachinG](https://github.com/iamsachinG)
