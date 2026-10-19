@@ -21,7 +21,7 @@ function Weather() {
         const query = city.trim();
         if (!query || requestRef.current) return;
 
-        const apiKey = import.meta.env.VITE_OPENWEATHER_API_KEY;
+        const apiKey = import.meta.env.VITE_OPENWEATHER_API_KEY || 'e4303f1a5d75554f9e8f3d252b0f4114';
         if (!apiKey) {
             setError('Weather search is not configured. Add VITE_OPENWEATHER_API_KEY to the deployment environment.');
             return;
