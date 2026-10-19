@@ -1,6 +1,5 @@
-import { useState } from 'react'
 import './App.css'
-import Weather from './main_page'
+import Weather from './main_page.jsx'
 
 function App() {
   return <Weather />

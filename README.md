@@ -66,7 +66,11 @@ Preview the production build:
 
 This application uses the
 [OpenWeatherMap API](https://openweathermap.org/api)
-to retrieve weather information.
+to retrieve weather information. Set `VITE_OPENWEATHER_API_KEY` in a local `.env` file before running the app:
+
+    VITE_OPENWEATHER_API_KEY=your_openweathermap_key
+
+Add the same variable in the Vercel project settings and redeploy. Vite exposes `VITE_` variables in browser code, so this key is visible to visitors; restrict it in OpenWeatherMap and rotate the previously committed key.
 
 ## 👨‍💻 Author
 
